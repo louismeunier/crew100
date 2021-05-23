@@ -17,6 +17,13 @@ const theme = createMuiTheme({
 			hint: "#F3DE2C",
 		},
 	},
+	typography: {
+		fontFamily: [
+			'Roboto Slab',
+			'Roboto Condensed',
+			'Helvetica Neue'
+		].join(',')
+	}
 });
 
 export default theme;
