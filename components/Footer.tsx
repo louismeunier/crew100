@@ -37,7 +37,7 @@ export default function Footer() {
                         className={classes.link}
                         variant="subtitle1"
                         component="a"
-                        href=""
+                        href="https://github.com/louismeunier/crew100/blob/main/LICENSE"
                     >
                         site licensed under the GNU General Public License v3.0
                     </Typography>
