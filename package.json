@@ -22,6 +22,7 @@
 		"dev": "next",
 		"build": "next build",
 		"start": "next start",
-		"pretty": "yarn prettier --write ."
+		"pretty": "yarn prettier --write .",
+		"prepare": "husky install"
 	}
 }
