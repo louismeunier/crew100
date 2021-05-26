@@ -15,18 +15,19 @@ const useStyles = makeStyles(theme => ({
 	wrapper: {
 		display: "flex",
 		minHeight: "100vh",
-		flexDirection: "column"
+		flexDirection: "column",
 	},
 	body: {
-		flexGrow: 1
+		flexGrow: 1,
 	},
 	sides: {
-		flexShrink: 0
-	}
-}))
+		flexShrink: 0,
+	},
+}));
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 	const classes = useStyles();
+
 	React.useEffect(() => {
 		// Remove the server-side injected CSS.
 		const jssStyles = document.querySelector("#jss-server-side");
@@ -38,13 +39,15 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 	return (
 		<>
 			<Head>
-				<title>My App</title>
 				<meta
 					name="viewport"
 					content="minimum-scale=1, initial-scale=1, width=device-width"
 				/>
-				<link rel="preconnect" href="https://fonts.gstatic.com"/>
-				<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Slab&display=swap" rel="stylesheet"/>
+				<link rel="preconnect" href="https://fonts.gstatic.com" />
+				<link
+					href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Slab&display=swap"
+					rel="stylesheet"
+				/>
 			</Head>
 			<ThemeProvider theme={theme}>
 				<CssBaseline />
