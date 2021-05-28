@@ -1,11 +1,21 @@
 import React from "react";
 // Modules
 import { NextPage } from "next/types";
-// Components
-import Header from "@components/Header/Header";
+import Page from "@components/Meta/Page";
+import AboutComponent from "@components/About";
+import Head from "next/head";
 
 const About: NextPage = () => {
-	return <h1>pictures</h1>;
+	return (
+		<>
+			<Head>
+				<title>Crew 100 | About</title>
+			</Head>
+			<Page title="About">
+				<AboutComponent />
+			</Page>
+		</>
+	);
 };
 
 export default About;
