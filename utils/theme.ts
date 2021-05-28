@@ -5,24 +5,20 @@ import { createMuiTheme } from "@material-ui/core/styles";
 const theme = createMuiTheme({
 	palette: {
 		primary: {
-			main: "#5C8001",
+			main: "#5C8001"
 		},
 		secondary: {
-			main: "#FBB02D",
+			main: "#FBB02D"
 		},
 		text: {
 			primary: "#CCCCCC",
 			secondary: "#5C8001",
 			disabled: "#7CB518",
-			hint: "#F3DE2C",
-		},
+			hint: "#F3DE2C"
+		}
 	},
 	typography: {
-		fontFamily: [
-			'Roboto Slab',
-			'Roboto Condensed',
-			'Helvetica Neue'
-		].join(',')
+		fontFamily: ["Roboto Slab", "Roboto Condensed", "Helvetica Neue"].join(",")
 	}
 });
 

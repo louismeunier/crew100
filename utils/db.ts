@@ -3,7 +3,7 @@ import nextConnect from "next-connect";
 
 const client = new MongoClient(process.env.MONGO_CONNECTION_STRING, {
 	useNewUrlParser: true,
-	useUnifiedTopology: true,
+	useUnifiedTopology: true
 });
 
 async function database(
