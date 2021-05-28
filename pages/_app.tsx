@@ -7,7 +7,6 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/core/styles";
 // Utils
 import Header from "@components/Header/Header";
-import Footer from "@components/Footer";
 import theme from "../utils/theme";
 import { makeStyles } from "@material-ui/core";
 
@@ -15,14 +14,14 @@ const useStyles = makeStyles(theme => ({
 	wrapper: {
 		display: "flex",
 		minHeight: "100vh",
-		flexDirection: "column",
+		flexDirection: "column"
 	},
 	body: {
-		flexGrow: 1,
+		flexGrow: 1
 	},
 	sides: {
-		flexShrink: 0,
-	},
+		flexShrink: 0
+	}
 }));
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
@@ -57,9 +56,6 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 					</div>
 					<div className={classes.body}>
 						<Component {...pageProps} />
-					</div>
-					<div className={classes.sides}>
-						<Footer />
 					</div>
 				</div>
 			</ThemeProvider>
