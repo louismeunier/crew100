@@ -14,21 +14,22 @@ import DateRangeIcon from "@material-ui/icons/DateRange";
 import InfoIcon from "@material-ui/icons/Info";
 import PermContactCalendarIcon from "@material-ui/icons/PermContactCalendar";
 import Link from "@material-ui/core/Link";
+import CardMembershipIcon from "@material-ui/icons/CardMembership";
 
 const useStyles = makeStyles(theme => ({
 	list: {
-		width: 400,
+		width: 400
 	},
 	menuButton: {
-		marginRight: theme.spacing(2),
-	},
+		marginRight: theme.spacing(2)
+	}
 }));
 
 export default function Sidebar() {
 	const classes = useStyles();
 
 	const [state, setState] = React.useState({
-		open: false,
+		open: false
 	});
 
 	const toggleDrawer =
@@ -70,12 +71,12 @@ export default function Sidebar() {
 								</Typography>
 							</ListItemText>
 						</ListItem>
-						<ListItem button component="a" href="/pictures">
+						{/* <ListItem button component="a" href="/posts">
 							<ListItemIcon>
 								<ImageIcon />
 							</ListItemIcon>
-							<ListItemText primary={"Pictures"} />
-						</ListItem>
+							<ListItemText primary={"Posts"} />
+						</ListItem> */}
 						<ListItem button component="a" href="/calendar">
 							<ListItemIcon>
 								<DateRangeIcon />
@@ -93,6 +94,17 @@ export default function Sidebar() {
 								<InfoIcon />
 							</ListItemIcon>
 							<ListItemText primary={"About"} />
+						</ListItem>
+						<Divider />
+						<ListItem
+							button
+							component="a"
+							href="https://raw.githubusercontent.com/louismeunier/crew100/main/LICENSE"
+						>
+							<ListItemIcon>
+								<CardMembershipIcon />
+							</ListItemIcon>
+							<ListItemText primary={"License"} />
 						</ListItem>
 					</List>
 				</Drawer>
