@@ -22,7 +22,7 @@ handler.get(async (req: UserApiRequest, res: NextApiResponse) => {
 	if (!name || !email) {
 		res.status(400).json({
 			error:
-				"Missing parameters, make sure to include name, email, and googleID",
+				"Missing parameters, make sure to include name, email, and googleID"
 		});
 		return;
 	}
@@ -34,7 +34,7 @@ handler.get(async (req: UserApiRequest, res: NextApiResponse) => {
 	console.log(userData);
 	if (!userData.error) {
 		res.status(400).json({
-			error: "User already exists",
+			error: "User already exists"
 		});
 		return;
 	}
@@ -42,7 +42,7 @@ handler.get(async (req: UserApiRequest, res: NextApiResponse) => {
 	const newUserDoc = {
 		name: name,
 		email: email,
-		role: "user",
+		role: "user"
 	};
 
 	let response = await req.db.collection("users").insertOne(newUserDoc);
@@ -52,11 +52,11 @@ handler.get(async (req: UserApiRequest, res: NextApiResponse) => {
 		res.json({
 			name: name,
 			email: email,
-			role: role,
+			role: role
 		});
 	} else {
 		res.status(500).json({
-			error: "An unknown error occurred creating the server",
+			error: "An unknown error occurred creating the server"
 		});
 	}
 });

@@ -13,18 +13,18 @@ interface UserApiRequest extends NextApiRequest {
 		name: string;
 	};
 }
-
+//custom typing of response here
 handler.get(async (req: UserApiRequest, res: NextApiResponse) => {
 	//do i have to do error handling here?
 	const filter = {
-		name: req.query.name,
+		name: req.query.name
 	};
 
 	let doc = await req.db.collection("users").findOne(filter);
 	console.log(doc);
 	if (!doc) {
 		res.status(404).json({
-			error: "User not found",
+			error: "User not found"
 		});
 	} else {
 		res.json(doc);
