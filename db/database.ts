@@ -1,5 +1,4 @@
 import { Db, MongoClient } from "mongodb";
-import nextConnect from "next-connect";
 
 const client = new MongoClient(process.env.MONGO_CONNECTION_STRING, {
 	useNewUrlParser: true,
@@ -17,8 +16,4 @@ async function database(
 	return next();
 }
 
-const middleware = nextConnect();
-
-middleware.use(database);
-
-export default middleware;
+export default database;
