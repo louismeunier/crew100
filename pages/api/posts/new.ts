@@ -1,7 +1,8 @@
 import nextConnect from "next-connect";
-import middleware from "@utils/db";
+import middleware from "@db/middleware";
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { Db } from "mongodb";
+import { GridFSBucket } from "mongodb";
 
 const handler = nextConnect();
 
